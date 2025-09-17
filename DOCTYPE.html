@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consultoria Transformação GG</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    scroll-behavior: smooth;
+  }
+
+  /* NAVBAR */
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+  }
+
+  nav .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #003366;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+  }
+
+  nav ul li a:hover {
+    color: #003366;
+  }
+
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+  }
+
+  /* HERO */
+  header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(to bottom, #111, #000);
+  }
+
+  header h1 {
+    font-size: 50px;
+    color: #003366;
+    margin-bottom: 20px;
+  }
+
+  header p {
+    max-width: 600px;
+    color: #ddd;
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+
+  .btn {
+    background: #003366;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background: #0055aa;
+    transform: scale(1.05);
+  }
+
+  .video {
+    margin-top: 40px;
+    width: 90%;
+    max-width: 800px;
+    height: 450px;
+  }
+
+  section {
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    gap: 20px;
+  }
+
+  .three-cols {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .card {
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 51, 102, 0.5);
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 15px;
+  }
+
+  .pricing {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .price-card {
+    background: #111;
+    padding: 40px;
+    border-radius: 12px;
+    width: 300px;
+  }
+
+  .price {
+    font-size: 36px;
+    color: #003366;
+    margin: 20px 0;
+  }
+
+  blockquote {
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    font-style: italic;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background: #111;
+    padding: 30px;
+    border-radius: 12px;
+  }
+
+  .contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #003366;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 8px;
+    background: #222;
+    color: #fff;
+    font-size: 16px;
+  }
+
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: 2px solid #003366;
+  }
+
+  footer {
+    background: #111;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  footer a {
+    color: #003366;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: none;
+      flex-direction: column;
+      background: #000;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 200px;
+      padding: 20px;
+    }
+
+    nav ul.active {
+      display: flex;
+    }
+
+    .menu-toggle {
+      display: block;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">Transformação GG</div>
+  <div class="menu-toggle">☰</div>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Serviços</a></li>
+    <li><a href="#plans">Planos</a></li>
+    <li><a href="#testimonials">Depoimentos</a></li>
+    <li><a href="#contact">Contato</a></li>
+  </ul>
+</nav>
+
+<header id="home">
+  <h1>Transforme Seu Corpo e Sua Vida</h1>
+  <p>Alcance resultados reais com nosso método exclusivo de treinos, dieta e acompanhamento personalizado.</p>
+  <button class="btn">Quero Começar Agora</button>
+  <div class="video">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="VSL" frameborder="0" allowfullscreen></iframe>
+  </div>
+</header>
+
+<section id="services">
+<h2>Por Que Escolher Nossa Consultoria?</h2>
+<div class="grid three-cols">
+  <div class="card">
+    <img src="https://via.placeholder.com/300x200?text=Antes+e+Depois" alt="Transformação">
+    <h3>Resultados Comprovados</h3>
+    <p>Mais de 3.000 alunos transformados em apenas 3 meses.</p>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/300x200?text=Treino+Intenso" alt="Treino">
+    <h3>Treinos Personalizados</h3>
+    <p>Programas adaptados ao seu corpo e objetivos para máxima eficiência.</p>
+  </div>
+  <div class="card">
+    <img src="https://via.placeholder.com/300x200?text=Acompanhamento" alt="Suporte">
+    <h3>Acompanhamento Direto</h3>
+    <p>Suporte contínuo via WhatsApp e Telegram com dicas exclusivas.</p>
+  </div>
+</div>
+</section>
+
+<section id="plans">
+<h2>Planos e Investimento</h2>
+<div class="pricing">
+  <div class="price-card">
+    <h3>Plano Mensal</h3>
+    <p class="price">R$97</p>
+    <button class="btn">Assinar Agora</button>
+  </div>
+  <div class="price-card">
+    <h3>Plano Anual</h3>
+    <p class="price">R$997</p>
+    <button class="btn">Assinar Agora</button>
+  </div>
+</div>
+</section>
+
+<section id="testimonials">
+<h2>Depoimentos de Alunos</h2>
+<blockquote>"Em 3 meses, perdi 10kg e ganhei definição muscular! O suporte é incrível." – Mariana S.</blockquote>
+<blockquote>"Sempre tive dificuldade para ganhar massa. Agora resultados reais e sustentáveis." – Carlos M.</blockquote>
+<blockquote>"O acompanhamento semanal mudou totalmente minha rotina e meus resultados!" – Juliana F.</blockquote>
+</section>
+
+<section id="contact">
+<h2>Entre em Contato</h2>
+<form class="contact-form">
+  <label for="name">Nome</label>
+  <input type="text" id="name" name="name" required>
+
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
+
+  <label for="phone">Telefone</label>
+  <input type="tel" id="phone" name="phone" required>
+
+  <button class="btn" type="submit">Enviar</button>
+</form>
+</section>
+
+<footer>
+<p>© 2025 Transformação GG. Todos os direitos reservados.</p>
+<div>
+<a href="#">Facebook</a>
+<a href="#">Instagram</a>
+<a href="#">LinkedIn</a>
+</div>
+</footer>
+
+<script>
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('nav ul');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+</script>
+</body>
+</html>
